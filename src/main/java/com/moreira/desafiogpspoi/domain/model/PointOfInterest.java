@@ -7,12 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-@Entity
+
 @Table(name = "tb_point_of_interest")
+@Entity
 public class PointOfInterest {
 
     @Id
@@ -23,6 +20,8 @@ public class PointOfInterest {
 
     private Integer x;
     private Integer y;
+
+    public PointOfInterest() {}
 
     public PointOfInterest(String name, Integer x, Integer y) {
         this.name = name;
